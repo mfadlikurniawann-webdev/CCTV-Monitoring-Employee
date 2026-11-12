@@ -1,0 +1,9 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+data/*
+!data/.gitkeep
+runs/
+*.pt
+*.onnx

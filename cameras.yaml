@@ -1,0 +1,24 @@
+person_model: yolo11n.pt
+# Before training, the COCO pretrained model supplies the cell phone class.
+phone_model: yolo11n.pt
+# Null = match phone-like class names. Set e.g. [0] only AFTER checking data.yaml.
+phone_class_ids: null
+device: cpu
+confidence: 0.4
+image_size: 960
+sample_fps: 5
+minimum_seconds: 10
+gap_seconds: 2
+retention_days: 7
+store_snapshots: false
+cameras:
+  - id: demo
+    name: Video uji
+    source: data/videos/demo.mp4
+    # Use 0 for local webcam or env:OFFICE_RTSP for EZVIZ RTSP.
+    # Source types: local video, integer webcam, or rtsp:// / rtsps:// URL.
+    zones:
+      - name: Area kerja
+        # Normalized polygon (x,y), each coordinate between 0 and 1.
+        # Associate using person's bounding-box center, not identity.
+        points: [[0, 0], [1, 0], [1, 1], [0, 1]]

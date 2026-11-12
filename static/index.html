@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CCTV Phone Monitor</title><link rel="stylesheet" href="/assets/style.css"><script defer src="/assets/app.js"></script></head>
+<body>
+<header><div><span class="eyebrow">LOCAL COMPUTER VISION</span><h1>CCTV Phone Monitor</h1><p>Observasi visual, bukan penilaian produktivitas.</p></div><a class="button" href="/api/export.csv">Ekspor CSV</a></header>
+<main><aside>Detektor mencatat HP di dalam kotak orang selama ambang waktu tertentu. HP di meja juga dapat memicu deteksi. Tidak membedakan urusan pribadi dan pekerjaan. Track ID bukan identitas karyawan.</aside>
+<div id="error" role="alert"></div><h2>Kamera</h2><section id="cameras" class="grid"></section>
+<section class="events"><h2>Kejadian terbaru <small id="count"></small></h2><p>Waktu dicatat dalam UTC. Detik sumber = posisi video / waktu sejak sesi live dimulai. Jeda pendek dapat tercakup dalam rentang durasi.</p>
+<div class="table"><table><thead><tr><th>Dicatat (UTC)</th><th>Kamera / zona</th><th>Track</th><th>Detik sumber</th><th>Rentang</th><th>Status</th><th>Review visual</th><th>Gambar</th></tr></thead><tbody id="events"></tbody></table></div></section>
+<footer>Jalankan hanya pada area dan tujuan yang telah disetujui. Keputusan ketenagakerjaan harus melalui peninjauan manusia.</footer></main>
+</body></html>
